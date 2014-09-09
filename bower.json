@@ -1,0 +1,28 @@
+{
+  "name": "project",
+  "version": "0.1.1",
+  "homepage": "https://github.com/gsellator/project",
+  "description": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.12",
+    "angular-animate": "~1.2.12",
+    "angular-cookies": "~1.2.12",
+    "angular-route": "~1.2.12",
+    "angular-resource": "~1.2.12",
+    "angular-touch": "~1.2.12",
+    "angular-bindonce": "~0.3.1",
+    "angular-spin": "~0.1.2",
+    "d3": "~3.4.11"
+  },
+  "resolutions": {
+    "angular": "1.2.23"
+  }
+}

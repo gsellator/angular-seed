@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="fr">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>SNPTV</title>
+        <meta name="author" content="Daily d'initiés">
+        <meta name="description" content="">
+        <meta name="Keywords" content="">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="MobileOptimized" content="width"/>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+        <meta name="apple-mobile-web-app-title" content="9 Heures"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+
+        <!-- @if NODE_ENV == 'LOCAL' -->
+        <link rel="stylesheet" href="/css/style.css"/>
+        <!-- @endif -->
+        <!-- @if (NODE_ENV == 'DEVELOPMENT' || NODE_ENV == 'PREPRODUCTION' || NODE_ENV == 'PRODUCTION') -->
+        <link rel="stylesheet" href="/css/<!-- @echo name -->.<!-- @echo version -->.min.css"/>
+        <!-- @endif -->
+
+        <!-- Icons -->
+        <link rel="icon" href="favicon.ico"/>
+        <meta property="og:image" content="/img/logo.png"/>
+        <meta name="twitter:image" content="/img/logo.png"/>
+
+        <!-- iOS -->
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/ios/icns_120x120.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/ios/icns_152x152.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/ios/icns_144x144.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/ios/icns_114x114.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/ios/icns_76x76.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/ios/icns_72x72.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/ios/icns_57x57.png"/>
+
+        <!-- Android -->
+        <link rel="shortcut icon" sizes="196x196" href="/img/ios/icns_196x196.png"/>
+        <link rel="shortcut icon" sizes="196x196" href="/img/ios/icns_196x196.png"/>
+        <link rel="shortcut icon" sizes="128x128" href="/img/ios/icns_128x128.png"/>
+        <link rel="apple-touch-icon" sizes="128x128" href="/img/ios/icns_128x128.png">
+        <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/img/ios/icns_128x128.png">
+
+        <link rel="apple-touch-startup-image" href="/img/ios/icns_320x460.png" media="(device-width: 320px)" />
+        <link rel="apple-touch-startup-image" href="/img/ios/icns_640x920.png" media="(device-height: 480px) and (-webkit-device-pixel-ratio: 2)" />
+        <link rel="apple-touch-startup-image" href="/img/ios/icns_640x1096.png" media="(device-height: 568px)" />
+        <link rel="apple-touch-startup-image" href="/img/ios/icns_768x1004.png" media="(device-width: 768px) and (orientation: portrait)" />
+        <link rel="apple-touch-startup-image" href="/img/ios/icns_748x1024.png" media="(device-width: 768px) and (orientation: landscape)" />
+        <link rel="apple-touch-startup-image" href="/img/ios/icns-_536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" />
+        <link rel="apple-touch-startup-image" href="/img/ios/icns_1496x2048.png" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" />
+        <meta name="msapplication-TileColor" content="#E7ECF5">
+        <meta name="msapplication-TileImage" content="/img/logo.png">
+
+        <base href="/" />
+    </head> 
+    <body id="body">
+        <!--[if lte IE 8]><p class="chromeframe">Pour pouvoir accéder à notre application, veuillez <a href="http://browsehappy.com/">mettre à jour</a> votre navigateur.<![endif]-->
+        <noscript>
+            <div id="noscript">
+                Pour pouvoir accéder à notre application, veuillez activer l'exécution de Javascript au sein de votre navigateur.
+            </div>
+        </noscript>
+
+        <!-- @if (NODE_ENV == 'DEVELOPMENT' || NODE_ENV == 'PREPRODUCTION') -->
+        <div style="position: absolute;right: 3px;bottom: 3px;height: 14px;z-index: 10000;padding-right: 4px;padding-left: 4px;line-height: 14px;font-weight: 500;font-size: 12px;background: white;">V <!-- @echo version --></div>
+        <!-- @endif -->
+
+        <div class="zone" ng-view ng-cloak>
+            
+        </div>
+
+<!--
+        <script type="text/javascript" src="//use.typekit.net/eru8rhk.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+-->
+
+        <!-- @if NODE_ENV == 'LOCAL' -->
+        <script data-main="/js/config" src="/js/lib/require.js"></script>
+        <!-- @endif -->
+
+        <!-- @if (NODE_ENV == 'DEVELOPMENT' || NODE_ENV == 'PREPRODUCTION' || NODE_ENV == 'PRODUCTION') -->
+        <script type="text/javascript" src="/js/lib/require.js"></script>
+        <script type="text/javascript" src="/js/<!-- @echo name -->.<!-- @echo version -->.min.js"></script>
+        <script type="text/javascript">
+            require(['angular', 'app', 'js/routes'], function (ng) {
+                ng.bootstrap(document, ['app']);
+            });
+        </script>
+        <!-- @endif -->
+
+    </body>
+</html>

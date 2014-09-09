@@ -1,0 +1,26 @@
+{
+  "name": "project",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "http://",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/gsellator/project"
+  },
+  "dependencies": {
+    "express": "~4.9.0",
+    "ejs": "~1.0.0"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-env": "*",
+    "grunt-bump": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-preprocess": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-sftp-deploy": "*"
+  }
+}

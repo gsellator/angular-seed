@@ -1,0 +1,87 @@
+@import "helpers/variables";
+
+::selection {color: #eee; background-color: $daily-dark-blue;}
+a {color: $daily-fluo-blue;text-decoration: none;}
+.noty{display: none !important;}
+i{font-style: normal;}
+.hidden {display: none !important;}
+
+*{
+    font-family: 'museo-sans-condensed', sans-serif;
+    font-weight: 100;
+    box-sizing: border-box; 
+    //    &:not(input){user-select: none;}
+}
+
+html, body, input, button, select, textarea, table, h3, h4, h5, h6 {
+    font-family: 'museo-sans-condensed', sans-serif;
+    font-weight: 100;
+    color: $daily-dark-grey;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.428571429;
+}
+
+ul{
+    list-style: none;
+    margin: 0; padding: 0;
+    li{padding: 0;}
+}
+
+#body{
+    overflow: hidden !important;
+    background-color: $daily-grey-0;
+    height: 100%;
+}
+
+.lowercase{
+    display: inline-block;
+    text-transform: lowercase;
+    &:first-letter{text-transform:uppercase;}
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 12px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: white;
+    border: 1px solid $daily-grey-6;
+    background-color: transparent;
+    border-color: $daily-grey-6;
+    line-height: 34px;
+    &:disabled{opacity: 0.4;}
+    &:active{background-color: $daily-grey-6;}
+
+    &:hover,
+    &:focus {
+        background-color: $daily-medium-grey;
+        border-color: $daily-grey-6;
+        color: white;
+        text-decoration: none;
+        outline:0; 
+        &:disabled{background-color: $daily-grey-6;}
+    }
+
+    &.dark{
+        border-color: $daily-dark-grey;
+        color: $daily-dark-grey;
+        &:hover, &:focus {background-color:$daily-grey-2;}
+        &:active{background-color: $daily-grey-0;}
+        &.active{background-color: $daily-fluo-blue; color: white;}
+    }
+
+    &.small{
+        padding: 4px 8px;
+        height: 30px;
+        line-height: 20px;
+    }
+}
