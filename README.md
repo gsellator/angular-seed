@@ -1,7 +1,3 @@
-# SNPTV
-> Homepage of the study 'Gens normaux Vs gens de la pub'
-
-
 ## Setup
 Install dependancies with npm and run the app :
 ```shell
