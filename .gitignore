@@ -1,4 +1,5 @@
 client/css/
+*.DS_Store
 node_modules/
 client/js/bower_components/
 pkg/
