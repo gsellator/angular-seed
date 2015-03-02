@@ -4,3 +4,4 @@ node_modules/
 client/js/bower_components/
 pkg/
 packages/
+.ftppass
